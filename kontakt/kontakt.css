@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+3D&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300, 400");
+
+* { /* Alle Elemnte werden angesprochen */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tomorrow";
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+    -webkit-user-drag: no15;
+}
+
+
+body { /* Body wird gestyled*/
+    height: 953px;
+    width: 1920px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.user-image { /* Benutzerbild wird gestyled */
+    width: 50px;
+    border-radius: 100%;
+}
+
+.sidebar { /* Sidebar wird gestyled */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 953px;
+    width: 80px;
+    background-color: #12171e;
+    padding: 0.4rem 0.8rem;
+    transition: all 0.5s ease;
+    z-index: 5;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+
+
+.sidebar.active { /* Sidebar wird ausgeklappt */
+    width: 250px;
+    transition: all 0.6s ease;
+}
+
+.sidebar #btn { /* Button in der Sidebar werden gestyled */
+    position: absolute;
+    color: white;
+    top: 0.4rem;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer
+}
+
+.sidebar.active #btn { /* Button in der ausgeklappten Sidebar werden gestyled */
+    left: 90%;
+}
+
+.sidebar .top .logo { /* Sidebar, Top und logo wird gestyled */
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sidebar.active .top .logo { /* Aktive Sidebar, Top und logo wird gestyled */
+    opacity: 1;
+}
+
+
+.top .logo span img { /* Top und logo bild wird gestyled */
+    width: 180px;
+}
+
+.user { /* username wird gestyled */
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.user p { /* username wird gestyled */
+    color: #fff;
+    opacity: 1;
+    margin-left: 1rem;
+}
+
+.user a { /* username wird gestyled */
+    text-decoration: none;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.sidebar p { /* Sidebar wird gestyled */ 
+    opacity: 0;
+}
+.sidebar.active p { /* aktive Sidebar wird gestyled */
+    opacity: 1;
+}
+
+.sidebar ul li { /* Sidebar wird gestyled */
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    width: 90%;
+    margin: 0.8rem auto;
+    line-height: 50px;
+}
+
+.sidebar ul li a { /* Sidebar wird gestyled */
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+}
+
+.sidebar ul li a:hover{ /* Sidebar wird gestyled */
+    background-color: #fff;
+    color: #12171e;
+}
+
+.sidebar ul li a i { /* Sidebar wird gestyled */
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+
+.sidebar .nav-item { /* Sidebar und die Items wird gestyled */
+    opacity: 0;
+}
+
+.sidebar.active .nav-item { /* aktive Sidebar und Items werden gestyled */
+    opacity: 1;
+}
+
+
+
+.main-content { /* alles rechts von der Sidebar wird gestyled */
+    position: relative;
+    height: 100%;
+    top: 0;
+    left: 80px;
+    transition: all 0.5s ease;
+    width: 1820px;
+}
+
+.image-container { /* Hintergrundbild neben der Sidebar wird gestyled */
+    position: relative;
+    display: inline-block;
+    width: 1840px;
+    position: fixed;
+    z-index: 0;
+}
+  
+.image-container img { /* Hintergrundbild neben der Sidebar wird gestyled */
+    display: block;
+    width: 1840px;
+    height: 953px;
+    pointer-events: none;
+}
+
+.overlay-text-heading { /* Überschrift neben der Sidebar wird gestyled */
+    position: absolute;
+    top: 10%; 
+    left: 39%; 
+    color: #fff; 
+    font-size: 60px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.overlay-text-paragraph { /* Text neben der Sidebar wird gestyled */
+    position: absolute;
+    top: 35%; 
+    left: 23%; 
+    color: #fff; 
+    font-size: 25px; 
+    text-align: center;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.disclaimer { /* Text neben der Sidebar wird gestyled */
+    position: absolute;
+    top: 95%; 
+    left: 34%; 
+    color: #fff; 
+    font-size: 15px; 
+    text-align: center;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.overlay-text-paragraph a { /* Text neben der Sidebar wird gestyled */
+    text-decoration: underline;
+    color: inherit;
+}
+
+.overlay-text-paragraph a:hover { /* Text neben der Sidebar wird gestyled */
+    text-decoration: underline;
+    color: blue;
+}
+
+.IconBox{/* Button Div wird gestyled */
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(61, 61, 61, 0.4);
+    position: absolute;
+    top: 50%; 
+    left: 10%; 
+    color: #fff; 
+    background-color: rgba(61, 61, 61, 0.4);
+    font-size: 25px; 
+    text-align: center;
+    backdrop-filter: blur(10px);
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+    width: 80%;
+    height: 400px;
+    border-radius: 20px;
+}
+
+.icon1 { /* Button 1 neben der Sidebar wird gestyled */
+    position: absolute;
+    top: 40%; 
+    left: 10%; 
+    color: #fff; 
+    font-size: 20px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.icon1-span { /* Button 1 neben der Sidebar wird gestyled */
+    position: absolute;
+    left: 30%;
+    top: 0%;
+    color: #fff; 
+    font-size: 25px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.icon2 { /* Button 2 neben der Sidebar wird gestyled */
+    position: absolute;
+    top: 40%; 
+    left: 30%; 
+    color: #fff; 
+    font-size: 20px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.icon2-span { /* Button 2 neben der Sidebar wird gestyled */
+    position: absolute;
+    left: 30%;
+    top: 0%;
+    color: #fff; 
+    font-size: 25px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.icon3 { /* Button 3 neben der Sidebar wird gestyled */
+    position: absolute;
+    top: 40%; 
+    left: 50%; 
+    color: #fff; 
+    font-size: 20px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.icon3-span { /* Button 3 neben der Sidebar wird gestyled */
+    position: absolute;
+    left: 30%;
+    top: 0%;
+    color: #fff; 
+    font-size: 25px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.icon4 { /* Button 4 neben der Sidebar wird gestyled */
+    position: absolute;
+    top: 40%; 
+    left: 70%; 
+    color: #fff; 
+    font-size: 20px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.icon4-span { /* Button 4 neben der Sidebar wird gestyled */
+    position: absolute;
+    left: 30%;
+    top: 0%;
+    color: #fff; 
+    font-size: 25px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.buttons ul { /* Buttons werden gestyled*/
+    font-family: "Roboto Condensed", sans-serif;
+    display: flex;
+}
+
+.buttons li { /* Buttons werden gestyled*/
+  list-style: none;
+  margin: 0;
+}
+
+.buttons .bx { /* Buttons werden gestyled*/
+  color: #262626;
+  font-size: 40px;
+  line-height: 80px;
+  transition: 0.5s;
+  padding-right: 14px;
+}
+
+.buttons a { /* Buttons werden gestyled*/
+  width: 250px;
+  height: 80px;
+  background: #fff;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  padding-left: 20px;
+  transform: rotate(-30deg) skew(25deg) translate(0, 0);
+  box-shadow: -20px 20px 10px #000000af;
+}
+
+.buttons a span { /* Buttons werden gestyled*/
+  color: #262626;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 30px;
+  letter-spacing: 4px;
+  transition: 0.5s;
+}
+
+
+.buttons a:before { /* Buttons werden gestyled*/
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 20px;
+  background: #b1b1b1;
+  top: 10px;
+  left: -20px;
+  transform: rotate(0deg) skewY(-45deg);
+}
+
+.buttons a:after { /* Buttons werden gestyled*/
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  background: #b1b1b1;
+  bottom: -20px;
+  left: -10px;
+  transform: rotate(0deg) skewX(-45deg);
+}
+
+.buttons a:hover { /* Buttons werden gestyled*/
+  transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
+  box-shadow: -50px 50px 50px #000000b6;
+}
+
+.buttons li:hover .bx,
+.buttons li:hover span { /* Buttons werden gestyled*/
+    color: #fff;
+}
+
+.buttons li:hover:nth-child(1) { /* Button 1 wird ein Farbeffekt gegeben*/
+    & a {
+        background: #e4405f;
+
+        &::before {
+            background: #d81c3f;
+        }
+
+        &::after {
+            background: #e46880;
+        }
+    }
+}
+
+.buttons li:hover:nth-child(2) { /* Button 2 wird ein Farbeffekt gegeben*/
+    & a {
+        background: #00aced;
+
+        &::before {
+            background: #097aa5;
+        }
+
+        &::after {
+            background: #53b9e0;
+        }
+    }
+}
+
+.buttons li:hover:nth-child(3) { /* Button 3 wird ein Farbeffekt gegeben*/
+    & a {
+      background: #1DB954;
+  
+      &::before {
+        background: #149641;
+      }
+  
+      &::after {
+        background: #1DB954;
+      }
+    }
+}
+
+.buttons li:hover:nth-child(4) { /* Button 4 wird ein Farbeffekt gegeben*/
+    & a {
+      background: #2b2b2b;
+  
+      &::before {
+        background: #272727;
+      }
+  
+      &::after {
+        background: #363636;
+      }
+    }
+}

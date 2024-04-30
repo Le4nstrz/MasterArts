@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- Icons werden importiert-->
+    <link rel="stylesheet" href="../login/login.css"> <!-- CSS wird eingebunden-->
+    <title>MasterArts Login</title>
+</head>
+<body>
+    <div class="container" id="container"> <!-- Div Container mit Login Fenster-->
+        <div class="form-container sign-up"> <!-- Registrieren Fenster-->
+            <form>
+                <h1>Account Erstellen</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-google-plus-g"></i> <!-- Icons -->
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-facebook-f"></i> <!-- Icons -->
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-github"></i> <!-- Icons -->
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-linkedin-in"></i> <!-- Icons -->
+                    </a>
+                </div>
+                <span>oder nutze deine email adresse</span>
+                <input type="text" placeholder="Name"> <!-- Input Felder --> 
+                <input type="email" placeholder="Email"> <!-- Input Felder -->
+                <input type="password" placeholder="Passwort"> <!-- Input Felder -->
+                <button onclick="warning()">Registrieren</button>
+            </form>
+        </div>
+        <div class="form-container sign-in"> <!-- Einloggen Fenster-->
+            <form>
+                <h1>Einloggen</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-google-plus-g"></i> <!-- Icons -->
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-facebook-f"></i> <!-- Icons -->
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-github"></i> <!-- Icons -->
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fa-brands fa-linkedin-in"></i> <!-- Icons -->
+                    </a>
+                </div>
+                <span>oder nutze deine email adresse und passwort</span>
+                <input type="email" placeholder="Email"> <!-- Input Felder -->
+                <input type="password" placeholder="Passwort"> <!-- Input Felder -->
+                <a href="#">Passwort vergessen?</a>
+                <button onclick="warning()">Einloggen</button>
+            </form>
+        </div>
+
+        <div class="toggle-container"> <!-- Container mit Text um Anmeldemethode zu wechseln-->
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Wilkommen zurück!</h1>
+                    <p>Gebe deine Daten ein um dich einzuloggen</p>
+                    <button class="hidden" id="login">Einloggen</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Wilkommen!</h1>
+                    <p>Registriere dich mit deinen Daten ein um einen Account zu erstellen</p>
+                    <button class="hidden" id="register">Registrieren</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="back"><a href="../index.html">zurück</a></p>
+
+
+    <script src="../login/login.js"></script> <!-- JavaScript wird eingebunden-->
+</body>
+</html>

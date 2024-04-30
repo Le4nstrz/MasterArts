@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+3D&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* { /* Alle Elemnte werden angesprochen */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tomorrow";
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+    -webkit-user-drag: no15;
+}
+
+
+body { /* Body wird gestyled*/
+    height: 953px;
+    width: 1920px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.user-image { /* Benutzerbild wird gestyled */
+    width: 50px;
+    border-radius: 100%;
+}
+
+.sidebar { /* Sidebar wird gestyled */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 953px;
+    width: 80px;
+    background-color: #12171e;
+    padding: 0.4rem 0.8rem;
+    transition: all 0.5s ease;
+    z-index: 5;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+
+
+.sidebar.active { /* Sidebar wird ausgeklappt */
+    width: 250px;
+    transition: all 0.6s ease;
+}
+
+.sidebar #btn { /* Button in der Sidebar werden gestyled */
+    position: absolute;
+    color: white;
+    top: 0.4rem;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer
+}
+
+.sidebar.active #btn { /* Button in der ausgeklappten Sidebar werden gestyled */
+    left: 90%;
+}
+
+.sidebar .top .logo { /* Sidebar, Top und logo wird gestyled */
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sidebar.active .top .logo { /* Aktive Sidebar, Top und logo wird gestyled */
+    opacity: 1;
+}
+
+
+.top .logo span img { /* Top und logo bild wird gestyled */
+    width: 180px;
+}
+
+.user { /* username wird gestyled */
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.user p { /* username wird gestyled */
+    color: #fff;
+    opacity: 1;
+    margin-left: 1rem;
+}
+
+.user a { /* username wird gestyled */
+    text-decoration: none;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.sidebar p { /* Sidebar wird gestyled */ 
+    opacity: 0;
+}
+.sidebar.active p { /* aktive Sidebar wird gestyled */
+    opacity: 1;
+}
+
+.sidebar ul li { /* Sidebar wird gestyled */
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    width: 90%;
+    margin: 0.8rem auto;
+    line-height: 50px;
+}
+
+.sidebar ul li a { /* Sidebar wird gestyled */
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+}
+
+.sidebar ul li a:hover{ /* Sidebar wird gestyled */
+    background-color: #fff;
+    color: #12171e;
+}
+
+.sidebar ul li a i { /* Sidebar wird gestyled */
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+
+.sidebar .nav-item { /* Sidebar und die Items wird gestyled */
+    opacity: 0;
+}
+
+.sidebar.active .nav-item { /* aktive Sidebar und Items werden gestyled */
+    opacity: 1;
+}
+
+
+
+.main-content { /* alles rechts von der Sidebar wird gestyled */
+    position: relative;
+    height: 100%;
+    top: 0;
+    left: 80px;
+    transition: all 0.5s ease;
+    width: 1820px;
+}
+
+.image-container { /* Hintergrundbild neben der Sidebar wird gestyled */
+    position: relative;
+    display: inline-block;
+    width: 1840px;
+    position: fixed;
+    z-index: 0;
+}
+  
+.image-container img { /* Hintergrundbild neben der Sidebar wird gestyled */
+    display: block;
+    width: 1840px;
+    height: 953px;
+    pointer-events: none;
+}
+
+.overlay-text-heading { /* Überschrift neben der Sidebar wird gestyled */
+    position: absolute;
+    top: 10%; 
+    left: 39%; 
+    color: #fff; 
+    font-size: 75px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.overlay-text-paragraph { /* Text neben der Sidebar wird gestyled */
+    position: absolute;
+    top: 40%; 
+    left: 7%; 
+    color: #fff; 
+    font-size: 25px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.overlay-text-paragraph ol{ /* Text neben der Sidebar wird gestyled */
+    position: absolute;
+    top: 43%; 
+    left: 15%; 
+    color: #fff; 
+    font-size: 25px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.list1{ /* Liste wird gestyled*/
+    position: absolute;
+    top: 45%; 
+    left: 15%; 
+    color: #fff; 
+    font-size: 25px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.list2{ /* Liste wird gestyled*/
+    position: absolute;
+    top: 49%; 
+    left: 14.7%; 
+    color: #fff; 
+    font-size: 25px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.list3{ /* Liste wird gestyled*/
+    position: absolute;
+    top: 53%; 
+    left: 14.7%; 
+    color: #fff; 
+    font-size: 25px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.list4{ /* Liste wird gestyled*/
+    position: absolute;
+    top: 57%; 
+    left: 14.7%; 
+    color: #fff; 
+    font-size: 25px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.Price{ /* Preis Div wird gestyled */
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(61, 61, 61, 0.4);
+    position: absolute;
+    top: 30%; 
+    left: 60%; 
+    color: #fff; 
+    background-color: rgba(61, 61, 61, 0.4);
+    font-size: 25px; 
+    text-align: center;
+    backdrop-filter: blur(10px);
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.PriceI{ /* Preis paragraph wird gestyled */
+    position: absolute;
+    top: 5%; 
+    left: 40%; 
+    color: #fff; 
+    font-size: 25px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.PriceP1{ /* Preis paragraph wird gestyled */
+    position: absolute;
+    top: 25%; 
+    left: 8%; 
+    color: #fff; 
+    font-size: 25px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.PriceP2{ /* Preis paragraph wird gestyled */
+    position: absolute;
+    top: 40%; 
+    left: 8%; 
+    color: #fff; 
+    font-size: 25px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.PriceP3{ /* Preis paragraph wird gestyled */
+    position: absolute;
+    top: 55%; 
+    left: 8%; 
+    color: #fff; 
+    font-size: 25px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.PriceP4{ /* Preis paragraph wird gestyled */
+    position: absolute;
+    top: 70%; 
+    left: 8%; 
+    color: #fff; 
+    font-size: 25px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.PriceP5{ /* Preis paragraph wird gestyled */
+    position: absolute;
+    top: 25%; 
+    left: 60%; 
+    color: #fff; 
+    font-size: 25px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.PriceP6{ /* Preis paragraph wird gestyled */
+    position: absolute;
+    top: 40%; 
+    left: 60%; 
+    color: #fff; 
+    font-size: 25px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.PriceP7{ /* Preis paragraph wird gestyled */
+    position: absolute;
+    top: 55%; 
+    left: 60%; 
+    color: #fff; 
+    font-size: 25px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.PriceP8{ /* Preis paragraph wird gestyled */
+    position: absolute;
+    top: 70%; 
+    left: 60%; 
+    color: #fff; 
+    font-size: 25px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.contactP { /* Kontakt paragraph wird gestyled */
+    position: absolute;
+    top: 500%; 
+    left: 0%; 
+    color: #fff; 
+    font-size: 25px; 
+    text-align: center;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.contactP strong, a{ /* Kontakt paragraph wird gestyled */
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+}
+
+.contactP strong, a:hover{ /* Kontakt paragraph wird gestyled */
+    text-decoration: underline;
+    color: rgb(0, 172, 230);
+}
+

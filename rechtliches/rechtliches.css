@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+3D&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* { /* Alle Elemnte werden angesprochen */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tomorrow";
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+    -webkit-user-drag: no15;
+}
+
+
+body { /* Body wird gestyled*/
+    height: 953px;
+    width: 1920px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.user-image { /* Benutzerbild wird gestyled */
+    width: 50px;
+    border-radius: 100%;
+}
+
+.sidebar { /* Sidebar wird gestyled */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 953px;
+    width: 80px;
+    background-color: #12171e;
+    padding: 0.4rem 0.8rem;
+    transition: all 0.5s ease;
+    z-index: 5;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+
+
+.sidebar.active { /* Sidebar wird ausgeklappt */
+    width: 250px;
+    transition: all 0.6s ease;
+}
+
+.sidebar #btn { /* Button in der Sidebar werden gestyled */
+    position: absolute;
+    color: white;
+    top: 0.4rem;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer
+}
+
+.sidebar.active #btn { /* Button in der ausgeklappten Sidebar werden gestyled */
+    left: 90%;
+}
+
+.sidebar .top .logo { /* Sidebar, Top und logo wird gestyled */
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sidebar.active .top .logo { /* Aktive Sidebar, Top und logo wird gestyled */
+    opacity: 1;
+}
+
+
+.top .logo span img { /* Top und logo bild wird gestyled */
+    width: 180px;
+}
+
+.user { /* username wird gestyled */
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.user p { /* username wird gestyled */
+    color: #fff;
+    opacity: 1;
+    margin-left: 1rem;
+}
+
+.user a { /* username wird gestyled */
+    text-decoration: none;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.sidebar p { /* Sidebar wird gestyled */ 
+    opacity: 0;
+}
+.sidebar.active p { /* aktive Sidebar wird gestyled */
+    opacity: 1;
+}
+
+.sidebar ul li { /* Sidebar wird gestyled */
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    width: 90%;
+    margin: 0.8rem auto;
+    line-height: 50px;
+}
+
+.sidebar ul li a { /* Sidebar wird gestyled */
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+}
+
+.sidebar ul li a:hover{ /* Sidebar wird gestyled */
+    background-color: #fff;
+    color: #12171e;
+}
+
+.sidebar ul li a i { /* Sidebar wird gestyled */
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+
+.sidebar .nav-item { /* Sidebar und die Items wird gestyled */
+    opacity: 0;
+}
+
+.sidebar.active .nav-item { /* aktive Sidebar und Items werden gestyled */
+    opacity: 1;
+}
+
+
+
+.main-content { /* alles rechts von der Sidebar wird gestyled */
+    position: relative;
+    height: 100%;
+    top: 0;
+    left: 80px;
+    transition: all 0.5s ease;
+    width: 1820px;
+}
+
+.image-container { /* Hintergrundbild neben der Sidebar wird gestyled */
+    position: relative;
+    display: inline-block;
+    width: 1840px;
+    position: fixed;
+    z-index: 0;
+}
+  
+.image-container img { /* Hintergrundbild neben der Sidebar wird gestyled */
+    display: block;
+    width: 1840px;
+    height: 953px;
+    pointer-events: none;
+}
+
+.overlay-text-heading { /* Überschrift neben der Sidebar wird gestyled */
+    position: absolute;
+    top: 10%; 
+    left: 41%; 
+    color: #fff; 
+    font-size: 60px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.impressum{ /* Impressum Div wird gestyled */
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(61, 61, 61, 0.4);
+    position: absolute;
+    top: 30%; 
+    left: 10%; 
+    color: #fff; 
+    background-color: rgba(61, 61, 61, 0.4);
+    font-size: 25px; 
+    text-align: center;
+    backdrop-filter: blur(10px);
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+    width: 400px;
+    height: 550px;
+    border-radius: 10px;
+}
+
+.impressum .h1, .p, .h2 { /* Mehrere elemente aus impressum werden gestyled*/
+    padding-top: 60px;
+    padding-left: 50px;
+    color: #fff;  
+    text-align: left;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.impressum .h1 { /* Überschrift wird gestyled*/
+    font-size: 40px; 
+}
+
+.impressum .p { /* Tet wird gestyled*/
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.impressum .h2 { /* Überschrift wird gestyled*/
+    padding-top: 50px;
+    font-size: 40px; 
+}
+
+.disclaimer { /* Disclaimer im container wird gestyled */
+    position: absolute;
+    top: 85%; 
+    left: 13.5%; 
+    color: #fff; 
+    font-size: 15px; 
+    text-align: left;
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.wiederrufsrecht{ /* Wiederrufsrecht Div wird gestyled */
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(61, 61, 61, 0.4);
+    position: absolute;
+    top: 30%; 
+    left: 40%; 
+    color: #fff; 
+    background-color: rgba(61, 61, 61, 0.4);
+    font-size: 25px; 
+    backdrop-filter: blur(10px);
+    font-weight: normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+    width: 1000px;
+    height: 550px;
+    border-radius: 10px;
+}
+
+.wiederrufsrecht .heading { /* Überschrift wird gestyled*/
+    font-size: 30px;
+    padding-top: 15px;
+    padding-left: 30px;
+    color: #fff;  
+    text-align: left;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.wiederrufsrecht .para { /* Text wird gestyled*/
+    font-size: 20px;
+    padding-top: 15px;
+    padding-left: 30px;
+    color: #fff;  
+    text-align: left;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.wiederrufsrecht .list { /* liste wird gestyled*/
+    font-size: 20px;
+    padding-top: 15px;
+    padding-left: 30px;
+    color: #fff;  
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}

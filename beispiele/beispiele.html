@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins:wght@200;400&display=swap"
+        rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../beispiele/beispiele.css">
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <title>MasterArts</title>
+</head>
+
+<body>
+
+    <div class="sidebar"> <!-- Sidebar wird erstellt-->
+        <div class="top">
+            <div class="logo">
+                <span><img src="../img/MasterArts.png" alt=""></span>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <div class="user">
+            <img src="../img/UserLogo.png" alt="" class="user-image">
+            <div>
+                <p class="bold">Benutzer</p>
+                <a href="login/login.html">
+                    <p>einloggen</p>
+                </a> <!-- Anklickbare Texte, die zu einer andere Seite führen-->
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="../about/about.html"> <!-- Anklickbare Texte, die zu einer andere Seite führen-->
+                    <i class="bx bxs-user"></i>
+                    <span class="nav-item">About</span>
+                </a>
+            </li>
+            <li>
+                <a href="../angebot/angebot.html"> <!-- Anklickbare Texte, die zu einer andere Seite führen-->
+                    <i class="bx bxs-cart-alt"></i>
+                    <span class="nav-item">Angebot</span>
+                </a>
+            </li>
+            <li>
+                <a href="../prozess/prozess.html"> <!-- Anklickbare Texte, die zu einer andere Seite führen-->
+                    <i class="bx bxs-network-chart"></i>
+                    <span class="nav-item">Prozess</span>
+                </a>
+            </li>
+            <li>
+                <a href="../beispiele/beispiele.html"> <!-- Anklickbare Texte, die zu einer andere Seite führen-->
+                    <i class="bx bxs-file-blank"></i>
+                    <span class="nav-item">Beispiele</span>
+                </a>
+            </li>
+            <li>
+                <a href="../equipment/equipment.html"> <!-- Anklickbare Texte, die zu einer andere Seite führen-->
+                    <i class="bx bxs-cog"></i>
+                    <span class="nav-item">Equipment</span>
+                </a>
+            </li>
+            <li>
+                <a href="../kontakt/kontakt.html"> <!-- Anklickbare Texte, die zu einer andere Seite führen-->
+                    <i class="bx bxs-envelope"></i>
+                    <span class="nav-item">Kontakt</span>
+                </a>
+            </li>
+            <li>
+                <a href="../rechtliches/rechtliches.html"> <!-- Anklickbare Texte, die zu einer andere Seite führen-->
+                    <i class="bx bx-list-check"></i>
+                    <span class="nav-item">Rechtliches</span>
+                </a>
+            </li>
+            <li>
+                <a href="../login/login.html"> <!-- Anklickbare Texte, die zu einer andere Seite führen-->
+                    <i class="bx bx-log-in"></i>
+                    <span class="nav-item">Login</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-content"> <!-- Alles was rechts von der Sidebar stehen soll-->
+        <div class="image-container">
+            <img src="../img/background-beispiele.png" alt="image not found">
+            <div class="overlay-text">
+                <h1 class="overlay-text-heading"><strong>Beispiele</strong></h1> <!-- Überschrift für den Text-->
+                <p class="overlay-text-paragraph"> 
+                    Hier sind einige Beispiele von Tracks, die ich selber produziert und gemixt/gemastert habe.  <br>
+                    Meine Fachgebiete sind die genres Phonk, Memphis, Breakcore/Jungle und Cyperpunk.
+                </p>
+                <div class="player"> <!-- Player wird erstellt-->
+                    <div class="hero"></div>
+                    <div class="music">
+                        <p>Artist: TakumoZero</p> <!-- Songinfos -->
+                        <h1>GUNNA</h1> <!-- Songinfos-->
+                        <div class="track">
+                            <a id="playBtn"><img src="../img/play.png" id="symbol"></a>
+                            <div id="waveform"></div>
+                        </div>
+                        <br>
+                        <p>Listen on <a href="https://open.spotify.com/intl-de/track/5P9mMFuZ6QvUZkpxMtYx66?si=f4f1bc1d9abb4aab" target="_blank">Spotify</a></p>
+                    </div>
+                </div>
+
+                <div class="player2"> <!-- Player wird erstellt-->
+                    <div class="hero"></div>
+                    <div class="music">
+                        <p>Artist: TakumoZero</p> <!-- Songinfos -->
+                        <h1>Inverted Lies</h1> <!-- Songinfos-->
+                        <div class="track">
+                            <a id="playBtn2"><img src="../img/play.png" id="symbol2"></a>
+                            <div id="waveform2"></div>
+                        </div>
+                        <br>
+                        <p>Releasing this year</p>
+                    </div>
+                </div> 
+
+                <div class="player4"> <!-- Player wird erstellt-->
+                    <div class="hero"></div>
+                    <div class="music">
+                        <p>Artist: TakumoZero</p> <!-- Songinfos -->
+                        <h1>UMKA - House Remix</h1> <!-- Songinfos-->
+                        <div class="track">
+                            <a id="playBtn4"><img src="../img/play.png" id="symbol4"></a>
+                            <div id="waveform4"></div>
+                        </div>
+                        <br>
+                        <p>Never releasing due to copyright</p>
+                    </div>
+                </div>
+
+                <div class="player5"> <!-- Player wird erstellt-->
+                    <div class="hero"></div>
+                    <div class="music">
+                        <p>Artist: TakumoZero, INCENDXM</p> <!-- Songinfos -->
+                        <h1>Dystopia</h1> <!-- Songinfos-->
+                        <div class="track">
+                            <a id="playBtn5"><img src="../img/play.png" id="symbol5"></a>
+                            <div id="waveform5"></div>
+                        </div>
+                        <br>
+                        <p>Listen on <a href="https://open.spotify.com/intl-de/track/5P9mMFuZ6QvUZkpxMtYx66?si=f4f1bc1d9abb4aab" target="_blank">Spotify</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/JavaScript" src="../beispiele/beispiele.js"></script> <!-- JavaScript datei wird eingebunden-->
+    <script>
+        
+    </script>
+</body>
+
+</html>
